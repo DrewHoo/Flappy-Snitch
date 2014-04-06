@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Quidditch()
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ nextLevel()
+comment3.params=
+comment3.target=void\ level1()
+comment4.params=
+comment4.target=void\ level2()
+comment5.params=
+comment5.target=void\ level3()
+comment6.params=
+comment6.target=void\ level4()
+comment7.params=
+comment7.target=void\ youWin()
+comment8.params=
+comment8.target=int\ width()
+comment8.text=\n\ gets\ a\ random\ number\ less\ than\ the\ width\ of\ the\ world.\n
+comment9.params=
+comment9.target=int\ height()
+comment9.text=\n\ gets\ a\ random\ number\ less\ than\ the\ height\ of\ the\ world.\n
+numComments=10

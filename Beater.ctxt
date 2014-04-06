@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=broom\ searchRange
+comment0.target=Beater(double,\ int)
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Beater\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment2.params=
+comment2.target=void\ randomInput()
+comment2.text=\n\ This\ version\ creates\ consistent\ rando\ movement,\ but\ it's\ poorly\ written\ and\ unclear\ and\n\ it\ isn't\ obvious\ how\ this\ would\ affect\ a\ beater's\ ability\ to\ find\ the\ bludger.\n
+comment3.params=
+comment3.target=void\ followBludger()
+comment3.text=\n\ This\ method\ changes\ allows\ the\ Beaters\ to\ follow\ the\ Bludgers.\n\ If\ there\ is\ no\ Bludger\ in\ range,\ it\ just\ moves\ back\ and\ forth.\n
+numComments=4

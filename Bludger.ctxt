@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=speed
+comment0.target=Bludger(int)
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=boolean\ atWorldEdgeVertical()
+comment3.params=
+comment3.target=boolean\ atWorldEdgeHorizontal()
+comment4.params=
+comment4.target=boolean\ lookForPlayer()
+comment5.params=
+comment5.target=boolean\ lookForBeater()
+comment6.params=
+comment6.target=boolean\ lookForSeeker()
+comment7.params=
+comment7.target=void\ destroy()
+comment8.params=clss
+comment8.target=boolean\ canSee(java.lang.Class)
+comment9.params=
+comment9.target=void\ hitTowardPlayer()
+numComments=10
