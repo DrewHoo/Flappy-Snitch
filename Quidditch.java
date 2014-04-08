@@ -1,6 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 import java.lang.Class;
+import java.awt.Color;
+import java.awt.Font;
 /**
  * Write a description of class QuidditchPitch here.
  * 
@@ -16,6 +18,7 @@ public class Quidditch extends World
     private GreenfootImage backgroundImage;
     private int level = 0;
     private GreenfootImage youwin = new GreenfootImage("youwin.jpg");
+    private Font font = new Font("Arial", 1, 24);
     
     public Quidditch()
     {    
@@ -24,6 +27,8 @@ public class Quidditch extends World
         setBackground(backgroundImage);
         addObject(new Player(.5), width(), height());
         addObject(new Snitch(3), width(), height());
+        showHealth();
+        showScore();
         //commented out for beta
         /*addObject(new Bludger(7), width(), height()); 
         addObject(new Bludger(7), width(), height());
@@ -34,7 +39,10 @@ public class Quidditch extends World
     }
     
     public void act() {
-        
+        backgroundImage = new GreenfootImage("QuidditchPitch_Beginning.png");
+        setBackground(backgroundImage);
+        showHealth();
+        showScore();
     }
     
     public void nextLevel() {
@@ -117,4 +125,28 @@ public class Quidditch extends World
     {
         return Greenfoot.getRandomNumber(getHeight());
     }
+    public void showHealth()
+    {
+        GreenfootImage bg = getBackground();
+        bg.setColor(Color.WHITE);
+        bg.setFont(font);
+        String playerHealth = new String("Health: ");
+        Player player = (Player)getObjects(Player.class).get(0);
+        int pH = player.getHealth();
+        for (int i = 0; i <= pH; i++) {
+            playerHealth += "@";
+        }
+        bg.drawString(playerHealth, 200 , 20);
+    }
+    public void showScore()
+    {
+        GreenfootImage bg = getBackground();
+        bg.setColor(Color.WHITE);
+        bg.setFont(font);
+        String playerScore = new String("Score: ");
+        Player player = (Player)getObjects(Player.class).get(0);
+        playerScore += player.getScore();
+        bg.drawString(playerScore, 200 , 50);
+    }
+    
 }

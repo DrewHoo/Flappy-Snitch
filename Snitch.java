@@ -1,4 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+import java.lang.Class;
+import java.awt.Color;
+import java.awt.Font;
 
 /**
  * This class governs the behavior of the Snitch.
@@ -50,6 +54,8 @@ public class Snitch extends Jouster
             //game over
         }
         if (playerCaught()) {
+            Player player = (Player)getObjectsInRange(1082, Player.class).get(0);
+            player.setScore(1);
             Quidditch quid = (Quidditch) getWorld();
             quid.nextLevel();
         }

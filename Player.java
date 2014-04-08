@@ -3,13 +3,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Player here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Michael Hoover
+ * @version 04.08.2014
  */
 public class Player extends Jouster
 {
     //public boolean spaceDown = false; holdover from old flight method
-    public static int health;
+    private int health;
+    private int score;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -19,7 +20,8 @@ public class Player extends Jouster
     public Player(double broom)
     {
         super("playerleft.png", "playerright.png", broom);
-        health = 3;
+        health = 10;
+        score = 0;
     }
 
     public void act() 
@@ -30,15 +32,29 @@ public class Player extends Jouster
         imageSwap();
     }    
 
-    public static void hit(int damage)
+    public void hit(int damage)
     {
         health -= damage;
+        //Quidditch quid = (Quidditch) getWorld();
+        //quid.showHealth();
         if (health <= 0)  {
             //Game over
             Greenfoot.stop();
         }
     }
+    
+    public int getHealth() {
+        return health;
+    }
+    
+    public int getScore() {
+        return score;
+    }
 
+    public void setScore(int score) {
+        this.score += score;
+    }
+    
     public void userInput()
     {
         //I like this method of flight but it feels too difficult for casual gaming
