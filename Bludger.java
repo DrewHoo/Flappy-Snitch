@@ -81,15 +81,16 @@ public class Bludger extends Projectile
       }
       return false;
    }
-   //this isn't working in the new build and I'm not sure why; 
-   //commenting out until we can talk about this at next meeting
+   
    public void destroy() {
       if (lookForSeeker() ) {
-         Seeker.hit(damage);
+         Seeker seeker = (Seeker)getWorld().getObjects(Seeker.class).get(0);
+         seeker.hit(damage);
          canSeePlayer = false;
       }
       if (lookForPlayer() && !canSeePlayer) {
-         Player.hit(damage);
+         Player player = (Player)getWorld().getObjects(Player.class).get(0);
+         player.hit(damage);
          canSeePlayer = true;
       }
       if (!lookForPlayer() && canSeePlayer) {
@@ -111,4 +112,8 @@ public class Bludger extends Projectile
         int angle = (int)Math.toDegrees(Math.atan2(y, x));
         addForce(new Vector(angle, speed));
    }
+   
+   public void incrementDamage()    {
+       damage++;
+    }
 }

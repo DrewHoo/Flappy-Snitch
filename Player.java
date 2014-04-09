@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Jouster
 {
-    //public boolean spaceDown = false; holdover from old flight method
-    public static int health;
+    private int score;
+    private int health;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -30,27 +30,17 @@ public class Player extends Jouster
         imageSwap();
     }    
 
-    public static void hit(int damage)
+    public void hit(int damage)
     {
         health -= damage;
-        if (health <= 0)  {
-            //Game over
-            Greenfoot.stop();
-        }
+    }
+    
+    public int getHealth()  {
+        return health;
     }
 
     public void userInput()
     {
-        //I like this method of flight but it feels too difficult for casual gaming
-        /*if(Greenfoot.isKeyDown("space") && !spaceDown)
-        {
-            spaceDown = true;
-            movement.add(verticalUp);
-        }
-        if(!Greenfoot.isKeyDown("space") && spaceDown)
-        {
-            spaceDown = false;
-        }*/
         if(Greenfoot.isKeyDown("space")) {
             addForce(verticalUp);
         }
@@ -62,11 +52,16 @@ public class Player extends Jouster
         }
     }
     
-    public void changeDirectionalImage() {
-        if (movement.dx > 0) {
-            
-            
-        }   
+    public void incrementScore()    {
+        score++;
+    }
+    
+    public int getScore()   {
+        return score;
+    }
+    
+    public void decreaseScore(int amount) {
+        score -= amount;
     }
 }
 

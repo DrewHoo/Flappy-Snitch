@@ -5,7 +5,7 @@ import java.lang.Class;
  * Write a description of class QuidditchPitch here.
  * 
  * @author Michael Hoover
- * @version 4/4/14
+ * @version 4/8/14
  */
 public class Quidditch extends World
 {
@@ -24,81 +24,58 @@ public class Quidditch extends World
         setBackground(backgroundImage);
         addObject(new Player(.5), width(), height());
         addObject(new Snitch(3), width(), height());
-        //commented out for beta
-        /*addObject(new Bludger(7), width(), height()); 
-        addObject(new Bludger(7), width(), height());
-        addObject(new Beater(1.3, 150), width(), height());
-        addObject(new Seeker(3, 50), width(), height());
-        */
         Greenfoot.setSpeed(43);
     }
     
     public void act() {
-        
+        Player player = (Player)getObjects(Player.class).get(0);
+        Snitch snitch = (Snitch)getObjects(Snitch.class).get(0);
+        if (player.getHealth() <= 0)    {
+            //Game over
+        }
+        if (snitch.seekerCaught())  {
+            player.decreaseScore(1);
+            snitch.setLocation(width(), height());
+        }
+        else if (snitch.playerCaught())  {
+            player.incrementScore();
+            snitch.setLocation(width(), height());
+            nextLevel();
+        }
     }
     
     public void nextLevel() {
-        level++;
-        List list = getObjects(null);
         Player player = (Player)getObjects(Player.class).get(0);
-        list.remove(player);
-        removeObjects(list);
-        switch (level) {
-            case 1:
-                level1();
-                break;
-            case 2:
-                level2();
-                break;
-            case 3:
-                level3();
-                break;
-            case 4:
-                level4();
-                break;
-            case 5:
-                youWin();
-            }
-                
+        //Add Seeker
+        if (player.getScore() == 2 && getObjects(Seeker.class).isEmpty())   {
+            addObject(new Seeker(3, 50), width(), height());
+        }       
+        //Add first Beater and Bludger
+        if (player.getScore() == 5 && getObjects(Beater.class).isEmpty() && getObjects(Bludger.class).isEmpty())  {
+            addObject(new Beater(1.3, 150), width(), height());
+            addObject(new Bludger(7), width(), height());
+        }
+        //Add second Beater and Bludger
+        if (player.getScore() == 8 && getObjects(Beater.class).size() == 1 && getObjects(Bludger.class).size() == 1)  {
+            addObject(new Beater(1.3, 150), width(), height());
+            addObject(new Bludger(7), width(), height());
+        }
+        //Increase difficulty
+        if (player.getScore() % 5 == 0)  {
+            Bludger bludger1 = (Bludger)getObjects(Bludger.class).get(0);
+            Bludger bludger2 = (Bludger)getObjects(Bludger.class).get(1);
+            Seeker seeker = (Seeker)getObjects(Seeker.class).get(0);
+            bludger1.incrementDamage();
+            bludger2.incrementDamage();
+            seeker.increaseRange(50);
+        }
+        //Add Voldemort
+        //if (player.getScore() == 20 && getObjects(Voldemort.class).isEmpty()) {
+        //    addObject(new Voldemort(), width(), height());
+        //}
+        //Add Snitch each time level increments
     }
-    
-    public void level1() {
-        addObject(new Snitch(3), width(), height());
-        addObject(new Bludger(10), width(), height());
-        addObject(new Bludger(10), width(), height());
-        addObject(new Beater(1.2, 125), width(), height());
-        Greenfoot.setSpeed(43);
-    }
-    
-    public void level2() {
-        addObject(new Snitch(3), width(), height());
-        addObject(new Bludger(13), width(), height());
-        addObject(new Bludger(13), width(), height());
-        addObject(new Beater(1.5, 150), width(), height());
-        addObject(new Seeker(3, 50), width(), height());
-        Greenfoot.setSpeed(43);
-    }
-    
-    public void level3() {
-        addObject(new Snitch(3), width(), height());
-        addObject(new Bludger(17), width(), height());
-        addObject(new Bludger(17), width(), height());
-        addObject(new Beater(1.5, 150), width(), height());
-        addObject(new Beater(1.5, 150), width(), height());
-        addObject(new Seeker(3, 75), width(), height());
-        Greenfoot.setSpeed(43);
-    }
-    
-    public void level4() {
-        addObject(new Snitch(3), width(), height());
-        addObject(new Bludger(20), width(), height());
-        addObject(new Bludger(20), width(), height());
-        addObject(new Beater(1.5, 150), width(), height());
-        addObject(new Beater(1.5, 150), width(), height());
-        addObject(new Seeker(3, 100), width(), height());
-        Greenfoot.setSpeed(43);
-    }
-    
+
     public void youWin() {
         setBackground(youwin);
     }
@@ -110,6 +87,7 @@ public class Quidditch extends World
     {
         return Greenfoot.getRandomNumber(getWidth());
     }
+    
     /**
      * gets a random number less than the height of the world.
      */
