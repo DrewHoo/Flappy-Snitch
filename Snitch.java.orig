@@ -55,6 +55,19 @@ public class Snitch extends Jouster
      */
     public void act() 
     {
+<<<<<<< HEAD
+        if (seekerCaught()) {
+            //game over
+        }
+        if (playerCaught()) {
+            Player player = (Player)getObjectsInRange(1082, Player.class).get(0);
+            player.setScore(1);
+            Quidditch quid = (Quidditch) getWorld();
+            quid.nextLevel();
+        }
+        else {
+=======
+>>>>>>> 1c8c3182445962c1fef4dc7287dac8575e3c0a09
         applyGravity(movement);
         randomInput();
         imageSwap();

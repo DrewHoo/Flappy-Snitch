@@ -5,13 +5,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * to catch the Snitch. If it gets hit by Bludgers in the process, some of its life is depleted.
  * 
  * @author Rebekah Stephenson
- * @version 4/1/2014
+ * @version 4/8/2014
  */
 public class Seeker extends Jouster
 {
     private int searchRange;
     private Vector speed;
-    public static int life;
+    public int life;
 
     /**
      * The constructor for the Seeker initializes its speed and search range (for the Snitch).
@@ -30,12 +30,8 @@ public class Seeker extends Jouster
      */
     public void act() 
     {
-        if (getObjectsInRange(searchRange, Snitch.class).size() == 1)   {
-            catchSnitch();
-        }
-        else    {
-            randomInput();
-        }
+        catchSnitch();
+        randomInput();
         applyGravity(movement);
         move();
         imageSwap();
@@ -50,12 +46,13 @@ public class Seeker extends Jouster
      */
     public void catchSnitch()
     {
-        Snitch snitch = (Snitch)getObjectsInRange(searchRange, Snitch.class).get(0);
-        double x = snitch.getX() - getX();
-        double y = snitch.getY() - getY();
-        int angle = (int)Math.toDegrees(Math.atan2(y, x));
-        addForce(new Vector(angle, 5));
-
+        if (!getObjectsInRange(searchRange, Snitch.class).isEmpty())    {
+            Snitch snitch = (Snitch)getObjectsInRange(searchRange, Snitch.class).get(0);
+            double x = snitch.getX() - getX();
+            double y = snitch.getY() - getY();
+            int angle = (int)Math.toDegrees(Math.atan2(y, x));
+            getMovement().setDirection(angle);
+        }
     }
 
     /**
@@ -71,7 +68,7 @@ public class Seeker extends Jouster
      * This method decreases the life of the Seeker when it is hit by a Bludger. When the life
      * drops to 0 or below, the game ends.
      */
-    public static void hit(int damage)
+    public void hit(int damage)
     {
         life -= damage;
     }
@@ -93,5 +90,9 @@ public class Seeker extends Jouster
         if (!getObjectsInRange(10, Bludger.class).isEmpty())    {
             this.getMovement().setDirection(Greenfoot.getRandomNumber(360));
         }
+    }
+    
+    public void increaseRange(int range) {
+        searchRange += range;
     }
 }
