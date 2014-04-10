@@ -34,6 +34,8 @@ public class Player extends Jouster
     public void hit(int damage)
     {
         health -= damage;
+        Quidditch qd = (Quidditch) getWorld();
+        qd.updateScoreboard();
     }
     
     public int getHealth()  {

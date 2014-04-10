@@ -27,14 +27,7 @@ public class Quidditch extends World
         setBackground(backgroundImage);
         addObject(new Player(.5), width(), height());
         addObject(new Snitch(3), width(), height());
-        showHealth();
-        showScore();
-        //commented out for beta
-        /*addObject(new Bludger(7), width(), height()); 
-        addObject(new Bludger(7), width(), height());
-        addObject(new Beater(1.3, 150), width(), height());
-        addObject(new Seeker(3, 50), width(), height());
-        */
+        updateScoreboard();
         Greenfoot.setSpeed(43);
     }
     
@@ -45,11 +38,13 @@ public class Quidditch extends World
             //Game over
         }
         if (snitch.seekerCaught())  {
-            player.decreaseScore(1);
+            player.hit(1);
+            updateScoreboard();
             snitch.setLocation(width(), height());
         }
         else if (snitch.playerCaught())  {
             player.incrementScore();
+            updateScoreboard();
             snitch.setLocation(width(), height());
             nextLevel();
         }
@@ -72,7 +67,7 @@ public class Quidditch extends World
             addObject(new Bludger(7), width(), height());
         }
         //Increase difficulty
-        if (player.getScore() % 5 == 0)  {
+        if (player.getScore() % 10 == 0)  {
             Bludger bludger1 = (Bludger)getObjects(Bludger.class).get(0);
             Bludger bludger2 = (Bludger)getObjects(Bludger.class).get(1);
             Seeker seeker = (Seeker)getObjects(Seeker.class).get(0);
@@ -106,9 +101,9 @@ public class Quidditch extends World
     {
         return Greenfoot.getRandomNumber(getHeight());
     }
-    public void showHealth()
+    public void updateScoreboard()
     {
-        GreenfootImage bg = getBackground();
+        GreenfootImage bg = new GreenfootImage("QuidditchPitch_Beginning.png");
         bg.setColor(Color.WHITE);
         bg.setFont(font);
         String playerHealth = new String("Health: ");
@@ -118,16 +113,10 @@ public class Quidditch extends World
             playerHealth += "@";
         }
         bg.drawString(playerHealth, 200 , 20);
-    }
-    public void showScore()
-    {
-        GreenfootImage bg = getBackground();
-        bg.setColor(Color.WHITE);
-        bg.setFont(font);
         String playerScore = new String("Score: ");
-        Player player = (Player)getObjects(Player.class).get(0);
         playerScore += player.getScore();
         bg.drawString(playerScore, 200 , 50);
+        setBackground(bg);
     }
     
 }

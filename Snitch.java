@@ -43,7 +43,7 @@ public class Snitch extends Jouster
     {
         if (isTouching(Player.class))   {
             Greenfoot.playSound("birds001.wav");
-            broom++;
+            //broom++;
             return true;
         }
         return false;
