@@ -20,4 +20,6 @@ comment5.text=\n\ This\ method\ returns\ the\ life\ of\ the\ Seeker.\n
 comment6.params=
 comment6.target=void\ dodge()
 comment6.text=\n\ This\ method\ allows\ the\ Seeker\ to\ dodge\ the\ approaching\ Bludgers\ by\ changing\ direction\n\ randomly.\n
-numComments=7
+comment7.params=range
+comment7.target=void\ increaseRange(int)
+numComments=8
