@@ -13,4 +13,10 @@ comment4.text=\n\ gets\ a\ random\ number\ less\ than\ the\ width\ of\ the\ worl
 comment5.params=
 comment5.target=int\ height()
 comment5.text=\n\ gets\ a\ random\ number\ less\ than\ the\ height\ of\ the\ world.\n
+<<<<<<< HEAD
 numComments=6
+=======
+comment6.params=
+comment6.target=void\ updateScoreboard()
+numComments=7
+>>>>>>> 8b089600e2fa54920778238c8dd18ddeddfe4b0f

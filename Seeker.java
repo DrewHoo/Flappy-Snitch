@@ -36,7 +36,8 @@ public class Seeker extends Jouster
         move();
         imageSwap();
         if (life <= 0) {
-            getWorld().removeObject(this);
+            //getWorld().removeObject(this); This causes a runtime error when Quidditch
+            //tried to perform an operation on seeker
         }
     }
 

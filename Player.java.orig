@@ -8,8 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Jouster
 {
+<<<<<<< HEAD
+    //public boolean spaceDown = false; holdover from old flight method
+    private int health;
+    private int score;
+=======
     private int score;
     private int health;
+>>>>>>> 1c8c3182445962c1fef4dc7287dac8575e3c0a09
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -34,14 +40,33 @@ public class Player extends Jouster
     public void hit(int damage)
     {
         health -= damage;
-        Quidditch qd = (Quidditch) getWorld();
-        qd.updateScoreboard();
+<<<<<<< HEAD
+        //Quidditch quid = (Quidditch) getWorld();
+        //quid.showHealth();
+        if (health <= 0)  {
+            //Game over
+            Greenfoot.stop();
+        }
+=======
     }
     
     public int getHealth()  {
         return health;
+>>>>>>> 1c8c3182445962c1fef4dc7287dac8575e3c0a09
+    }
+    
+    public int getHealth() {
+        return health;
+    }
+    
+    public int getScore() {
+        return score;
     }
 
+    public void setScore(int score) {
+        this.score += score;
+    }
+    
     public void userInput()
     {
         if(Greenfoot.isKeyDown("space")) {
