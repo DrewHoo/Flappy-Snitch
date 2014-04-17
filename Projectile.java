@@ -23,6 +23,24 @@ public class Projectile extends SmoothMover //maybe necessary for bludger?
     {
         // Add your action code here.
     }
+     public boolean atWorldEdgeVertical()
+   {
+      if(getY() < 20 || getY() > getWorld().getHeight() - 20) {
+         return true;
+      }
+      else
+         return false;
+   }
+
+   public boolean atWorldEdgeHorizontal()
+   {
+      if(getX() < 20 || getX() > getWorld().getWidth() - 20) {
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
     
     public void applyForces() {
         addForce(gravity);
