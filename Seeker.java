@@ -35,10 +35,6 @@ public class Seeker extends Jouster
         applyGravity(movement);
         move();
         imageSwap();
-        if (life <= 0) {
-            //getWorld().removeObject(this); This causes a runtime error when Quidditch
-            //tried to perform an operation on seeker
-        }
     }
 
     /**
@@ -93,6 +89,9 @@ public class Seeker extends Jouster
         }
     }
     
+    /**
+     * This method increases the range of the seeker, making it find the snitch more quickly.
+     */
     public void increaseRange(int range) {
         searchRange += range;
     }

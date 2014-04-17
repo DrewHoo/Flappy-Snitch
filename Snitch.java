@@ -43,7 +43,6 @@ public class Snitch extends Jouster
     {
         if (isTouching(Player.class))   {
             Greenfoot.playSound("birds001.wav");
-            //broom++;
             return true;
         }
         return false;
@@ -59,6 +58,9 @@ public class Snitch extends Jouster
         randomInput();
         imageSwap();
         move();
+        if (!getObjectsInRange(100, Player.class).isEmpty() || !getObjectsInRange(100, Seeker.class).isEmpty())   {
+            getMovement().setDirection(Greenfoot.getRandomNumber(17));
+        }
     }    
 
     /**
