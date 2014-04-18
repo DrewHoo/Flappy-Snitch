@@ -5,8 +5,15 @@ comment1.params=
 comment1.target=Jouster()
 comment2.params=
 comment2.target=void\ imageSwap()
+<<<<<<< HEAD
 comment2.text=\r\n\ Swaps\ the\ image\ based\ on\ which\ way\ the\ Jouster\ is\ moving.\ It\ would\ be\ nice\r\n\ to\ upgrade\ this\ to\ base\ it\ on\ which\ way\ Jouster\ is\ accelerating.\r\n
 comment3.params=movement
 comment3.target=void\ applyGravity(Vector)
 comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Jouster\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+=======
+comment2.text=\n\ Swaps\ the\ image\ based\ on\ which\ way\ the\ Jouster\ is\ moving.\ It\ would\ be\ nice\n\ to\ upgrade\ this\ to\ base\ it\ on\ which\ way\ Jouster\ is\ accelerating.\n
+comment3.params=movement
+comment3.target=void\ applyGravity(Vector)
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ Jouster\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+>>>>>>> fa0bb712bd95593cd713296ac0e58cd81ee45cb4
 numComments=4

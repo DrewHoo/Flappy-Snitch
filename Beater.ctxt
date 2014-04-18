@@ -3,6 +3,7 @@ comment0.params=broom\ searchRange
 comment0.target=Beater(double,\ int)
 comment1.params=
 comment1.target=void\ act()
+<<<<<<< HEAD
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Beater\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ randomInput()
@@ -10,4 +11,13 @@ comment2.text=\r\n\ This\ version\ creates\ consistent\ rando\ movement,\ but\ i
 comment3.params=
 comment3.target=void\ followBludger()
 comment3.text=\r\n\ This\ method\ changes\ allows\ the\ Beaters\ to\ follow\ the\ Bludgers.\r\n\ If\ there\ is\ no\ Bludger\ in\ range,\ it\ just\ moves\ back\ and\ forth.\r\n
+=======
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Beater\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment2.params=
+comment2.target=void\ randomInput()
+comment2.text=\n\ This\ version\ creates\ consistent\ rando\ movement,\ but\ it's\ poorly\ written\ and\ unclear\ and\n\ it\ isn't\ obvious\ how\ this\ would\ affect\ a\ beater's\ ability\ to\ find\ the\ bludger.\n
+comment3.params=
+comment3.target=void\ followBludger()
+comment3.text=\n\ This\ method\ changes\ allows\ the\ Beaters\ to\ follow\ the\ Bludgers.\n\ If\ there\ is\ no\ Bludger\ in\ range,\ it\ just\ moves\ back\ and\ forth.\n
+>>>>>>> fa0bb712bd95593cd713296ac0e58cd81ee45cb4
 numComments=4

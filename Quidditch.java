@@ -48,7 +48,10 @@ public class Quidditch extends World
     public Quidditch() throws IOException
     {    
         super(900, 600, 1); 
+<<<<<<< HEAD
         //Greenfoot.playSound("background.mp3");
+=======
+>>>>>>> fa0bb712bd95593cd713296ac0e58cd81ee45cb4
         backgroundImage = new GreenfootImage("QuidditchPitch_Beginning.png");
         setBackground(backgroundImage);
         loadBoard();

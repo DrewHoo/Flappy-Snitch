@@ -28,10 +28,13 @@ public abstract class SmoothMover extends Actor
         this.movement = movement;
     }
     
+<<<<<<< HEAD
     public void setMovement(Vector movement) {
         this.movement = movement;
     }
     
+=======
+>>>>>>> fa0bb712bd95593cd713296ac0e58cd81ee45cb4
     /**
      * Move in the current movement direction.
      */

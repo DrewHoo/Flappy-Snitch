@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Quidditch()
+<<<<<<< HEAD
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Quidditch.\r\n\ Loads\ the\ scoreboard\ and\ adds\ the\ Player\ and\ Seeker\ to\ the\ Quidditch\ pitch.\r\n
 comment1.params=
 comment1.target=void\ act()
@@ -30,3 +31,24 @@ comment9.params=
 comment9.target=void\ updateScoreboard()
 comment9.text=\r\n\ This\ method\ updates\ the\ player's\ health\ and\ score\ displayed\ on\ the\ screen.\r\n
 numComments=10
+=======
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ nextLevel()
+comment3.params=
+comment3.target=void\ youWin()
+comment4.params=
+comment4.target=int\ width()
+comment4.text=\n\ gets\ a\ random\ number\ less\ than\ the\ width\ of\ the\ world.\n
+comment5.params=
+comment5.target=int\ height()
+comment5.text=\n\ gets\ a\ random\ number\ less\ than\ the\ height\ of\ the\ world.\n
+<<<<<<< HEAD
+numComments=6
+=======
+comment6.params=
+comment6.target=void\ updateScoreboard()
+numComments=7
+>>>>>>> 8b089600e2fa54920778238c8dd18ddeddfe4b0f
+>>>>>>> fa0bb712bd95593cd713296ac0e58cd81ee45cb4
