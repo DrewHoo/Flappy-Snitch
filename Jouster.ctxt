@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=left\ right\ broom
+comment0.target=Jouster(java.lang.String,\ java.lang.String,\ double)
+comment1.params=
+comment1.target=Jouster()
+comment2.params=
+comment2.target=void\ imageSwap()
+comment2.text=\r\n\ Swaps\ the\ image\ based\ on\ which\ way\ the\ Jouster\ is\ moving.\ It\ would\ be\ nice\r\n\ to\ upgrade\ this\ to\ base\ it\ on\ which\ way\ Jouster\ is\ accelerating.\r\n
+comment3.params=movement
+comment3.target=void\ applyGravity(Vector)
+comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Jouster\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=4

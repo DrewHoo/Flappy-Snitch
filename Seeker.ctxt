@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=broom\ searchRange
+comment0.target=Seeker(double,\ int)
+comment0.text=\r\n\ The\ constructor\ for\ the\ Seeker\ initializes\ its\ speed\ and\ search\ range\ (for\ the\ Snitch).\r\n\ It\ also\ initializes\ the\ Seeker's\ life.\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Seeker\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ catchSnitch()
+comment2.text=\r\n\ This\ method\ changes\ the\ direction\ of\ the\ Seeker\ when\ a\ Snitch\ comes\ into\ range.\r\n\ If\ there\ is\ no\ Snitch\ in\ range,\ it\ does\ nothing.\r\n
+comment3.params=
+comment3.target=void\ randomInput()
+comment3.text=\r\n\ This\ method\ causes\ the\ Seeker\ to\ move\ randomly.\r\n
+comment4.params=damage
+comment4.target=void\ hit(int)
+comment4.text=\r\n\ This\ method\ decreases\ the\ life\ of\ the\ Seeker\ when\ it\ is\ hit\ by\ a\ Bludger.\ When\ the\ life\r\n\ drops\ to\ 0\ or\ below,\ the\ game\ ends.\r\n
+comment5.params=
+comment5.target=int\ getLife()
+comment5.text=\r\n\ This\ method\ returns\ the\ life\ of\ the\ Seeker.\r\n
+comment6.params=
+comment6.target=void\ dodge()
+comment6.text=\r\n\ This\ method\ allows\ the\ Seeker\ to\ dodge\ the\ approaching\ Bludgers\ by\ changing\ direction\r\n\ randomly.\r\n
+comment7.params=range
+comment7.target=void\ increaseRange(int)
+comment7.text=\r\n\ This\ method\ increases\ the\ range\ of\ the\ seeker,\ making\ it\ find\ the\ snitch\ more\ quickly.\r\n
+numComments=8

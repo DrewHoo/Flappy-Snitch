@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=broom
+comment0.target=Snitch(double)
+comment0.text=\r\n\ The\ constructor\ initializes\ the\ Snitch\ with\ a\ speed.\ It\ also\ plays\ a\ sound\ as\ the\ Snitch\ is\r\n\ created.\r\n
+comment1.params=
+comment1.target=boolean\ seekerCaught()
+comment1.text=\r\n\ This\ method\ determines\ if\ the\ Snitch\ has\ been\ caught\ by\ the\ Seeker.\ If\ it\ has,\r\n\ the\ method\ returns\ true.\ Otherwise,\ it\ returns\ false.\r\n
+comment2.params=
+comment2.target=boolean\ playerCaught()
+comment2.text=\r\n\ This\ method\ determines\ if\ the\ Snitch\ has\ been\ caught\ by\ the\ Player.\ If\ it\ has,\r\n\ the\ method\ returns\ true\ and\ plays\ a\ sound.\ Otherwise,\ it\ returns\ false.\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ The\ Snitch\ flies\ as\ normal\ until\ it\ is\ caught\ by\ either\ the\ Seeker\ or\ the\ Player.\ When\ this\r\n\ happens,\ the\ game\ ends.\r\n
+comment4.params=
+comment4.target=void\ randomInput()
+comment4.text=\r\n\ This\ method\ moves\ the\ Snitch\ randomly.\r\n
+numComments=5

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Voldemort()
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Voldemort\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ fire()
+comment2.text=\r\n\ Fire\ a\ spell.\r\n
+comment3.params=
+comment3.target=void\ fly()
+comment3.text=\r\n\ Movement\ of\ Voldemort.\r\n
+comment4.params=
+comment4.target=void\ dragY()
+comment5.params=
+comment5.target=void\ dragX()
+comment6.params=
+comment6.target=boolean\ atWorldEdgeVertical()
+comment7.params=
+comment7.target=boolean\ atWorldEdgeHorizontal()
+numComments=8

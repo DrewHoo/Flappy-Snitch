@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=broom
+comment0.target=Player(double)
+comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Player\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ This\ method\ moves\ the\ player\ as\ the\ user\ directs.\r\n
+comment2.params=damage
+comment2.target=void\ hit(int)
+comment2.text=\r\n\ This\ method\ decreases\ the\ player's\ health.\r\n
+comment3.params=
+comment3.target=int\ getHealth()
+comment3.text=\r\n\ This\ method\ returns\ the\ player's\ health.\r\n
+comment4.params=
+comment4.target=void\ userInput()
+comment4.text=\r\n\ This\ method\ controls\ the\ movement\ of\ the\ player\ according\ to\ left\ and\ right\r\n\ keys\ and\ spacebar.\r\n
+comment5.params=
+comment5.target=void\ incrementScore()
+comment5.text=\r\n\ This\ method\ increments\ the\ player's\ score.\r\n
+comment6.params=
+comment6.target=int\ getScore()
+comment6.text=\r\n\ This\ method\ returns\ the\ player's\ score.\r\n
+comment7.params=amount
+comment7.target=void\ decreaseScore(int)
+comment7.text=\r\n\ This\ method\ decreases\ the\ player's\ score\ by\ the\ given\ amount.\r\n
+numComments=8
