@@ -4,14 +4,9 @@ comment0.target=Projectile()
 comment1.params=
 comment1.target=void\ act()
 comment2.params=
-<<<<<<< HEAD
 comment2.target=boolean\ atWorldEdgeVertical()
 comment3.params=
 comment3.target=boolean\ atWorldEdgeHorizontal()
 comment4.params=
 comment4.target=void\ applyForces()
 numComments=5
-=======
-comment2.target=void\ applyForces()
-numComments=3
->>>>>>> fa0bb712bd95593cd713296ac0e58cd81ee45cb4

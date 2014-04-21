@@ -2,3 +2,6 @@ Albert 45
 Dawson 40
 James 30
 Miranda 20
+Michael 19
+Micahel 8
+Michael 0

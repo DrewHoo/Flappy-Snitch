@@ -1,7 +1,6 @@
 #BlueJ class context
 comment0.params=broom
 comment0.target=Player(double)
-<<<<<<< HEAD
 comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Player\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment1.params=
 comment1.target=void\ act()
@@ -24,21 +23,4 @@ comment6.text=\r\n\ This\ method\ returns\ the\ player's\ score.\r\n
 comment7.params=amount
 comment7.target=void\ decreaseScore(int)
 comment7.text=\r\n\ This\ method\ decreases\ the\ player's\ score\ by\ the\ given\ amount.\r\n
-=======
-comment0.text=\n\ Act\ -\ do\ whatever\ the\ Player\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-comment1.params=
-comment1.target=void\ act()
-comment2.params=damage
-comment2.target=void\ hit(int)
-comment3.params=
-comment3.target=int\ getHealth()
-comment4.params=
-comment4.target=void\ userInput()
-comment5.params=
-comment5.target=void\ incrementScore()
-comment6.params=
-comment6.target=int\ getScore()
-comment7.params=amount
-comment7.target=void\ decreaseScore(int)
->>>>>>> fa0bb712bd95593cd713296ac0e58cd81ee45cb4
 numComments=8

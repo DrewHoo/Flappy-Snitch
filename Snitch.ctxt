@@ -1,7 +1,6 @@
 #BlueJ class context
 comment0.params=broom
 comment0.target=Snitch(double)
-<<<<<<< HEAD
 comment0.text=\r\n\ The\ constructor\ initializes\ the\ Snitch\ with\ a\ speed.\ It\ also\ plays\ a\ sound\ as\ the\ Snitch\ is\r\n\ created.\r\n
 comment1.params=
 comment1.target=boolean\ seekerCaught()
@@ -15,19 +14,4 @@ comment3.text=\r\n\ The\ Snitch\ flies\ as\ normal\ until\ it\ is\ caught\ by\ e
 comment4.params=
 comment4.target=void\ randomInput()
 comment4.text=\r\n\ This\ method\ moves\ the\ Snitch\ randomly.\r\n
-=======
-comment0.text=\n\ The\ constructor\ initializes\ the\ Snitch\ with\ a\ speed.\ It\ also\ plays\ a\ sound\ as\ the\ Snitch\ is\n\ created.\n
-comment1.params=
-comment1.target=boolean\ seekerCaught()
-comment1.text=\n\ This\ method\ determines\ if\ the\ Snitch\ has\ been\ caught\ by\ the\ Seeker.\ If\ it\ has,\n\ the\ method\ returns\ true.\ Otherwise,\ it\ returns\ false.\n
-comment2.params=
-comment2.target=boolean\ playerCaught()
-comment2.text=\n\ This\ method\ determines\ if\ the\ Snitch\ has\ been\ caught\ by\ the\ Player.\ If\ it\ has,\n\ the\ method\ returns\ true\ and\ plays\ a\ sound.\ Otherwise,\ it\ returns\ false.\n
-comment3.params=
-comment3.target=void\ act()
-comment3.text=\n\ The\ Snitch\ flies\ as\ normal\ until\ it\ is\ caught\ by\ either\ the\ Seeker\ or\ the\ Player.\ When\ this\n\ happens,\ the\ game\ ends.\n
-comment4.params=
-comment4.target=void\ randomInput()
-comment4.text=\n\ This\ method\ moves\ the\ Snitch\ randomly.\n
->>>>>>> fa0bb712bd95593cd713296ac0e58cd81ee45cb4
 numComments=5
