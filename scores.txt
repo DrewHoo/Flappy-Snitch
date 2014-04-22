@@ -1,7 +1,10 @@
 Albert 45
 Dawson 40
 James 30
+Michael 22
+Michael 22
 Miranda 20
 Michael 19
+michael 14
+Michael 14
 Micahel 8
-Michael 0

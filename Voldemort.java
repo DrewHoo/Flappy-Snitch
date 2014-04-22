@@ -15,6 +15,7 @@ public class Voldemort extends Projectile
     public Voldemort() {
         reloadDelayCount = 0;
         wandReload = 20;
+        Greenfoot.playSound("Voldemort.wav");
     }
 
     /**

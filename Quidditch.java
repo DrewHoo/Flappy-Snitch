@@ -40,6 +40,7 @@ public class Quidditch extends World
     private int level = 0;
     private Font font = new Font("Arial", 1, 24);
     private ArrayList<Score> board = new ArrayList<Score>();
+    private GreenfootSound background;
     
     /**
      * Constructor for objects of class Quidditch.
@@ -48,8 +49,8 @@ public class Quidditch extends World
     public Quidditch() throws IOException
     {    
         super(900, 600, 1); 
-
-        //Greenfoot.playSound("background.mp3");
+        background = new GreenfootSound("background.mp3");
+        background.playLoop();
 
         backgroundImage = new GreenfootImage("QuidditchPitch_Beginning.png");
         setBackground(backgroundImage);
@@ -70,6 +71,7 @@ public class Quidditch extends World
         Snitch snitch = (Snitch)getObjects(Snitch.class).get(0);
         if (player.getHealth() <= 0)    {
             //Game over
+            background.stop();
             String name = JOptionPane.showInputDialog("GAME OVER!\n\nEnter name:");
             Score score = new Score(name, player.getScore());
             addHighScore(score);
@@ -181,10 +183,9 @@ public class Quidditch extends World
             seeker.increaseRange(50);
         }
         //Add Voldemort
-        //if (player.getScore() == 20 && getObjects(Voldemort.class).isEmpty()) {
-        //    addObject(new Voldemort(), width(), height());
-        //}
-        //Add Snitch each time level increments
+        if (player.getScore() == 17 && getObjects(Voldemort.class).isEmpty()) {
+            addObject(new Voldemort(), width(), height());
+        }
     }
 
     /**

@@ -32,12 +32,13 @@ public class Player extends Jouster
         move();
         imageSwap();
     }    
-
+    
     /**
      * This method decreases the player's health.
      */
     public void hit(int damage)
     {
+        Greenfoot.playSound("oof.wav");
         health -= damage;
         Quidditch qd = (Quidditch) getWorld();
         qd.updateScoreboard();

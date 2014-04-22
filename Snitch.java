@@ -19,7 +19,7 @@ public class Snitch extends Jouster
     public Snitch(double broom)
     {
         super("snitchleft.png", "snitchright.png", broom);
-        Greenfoot.playSound("birds001.wav");
+        //Greenfoot.playSound("birds001.wav");
     }
 
     /**
@@ -29,7 +29,7 @@ public class Snitch extends Jouster
     public boolean seekerCaught()
     {
         if (isTouching(Seeker.class))   {
-            //Greenfoot.playSound("birds001.wav");
+            Greenfoot.playSound("slitherin.wav");
             return true;
         }
         return false;
@@ -42,7 +42,7 @@ public class Snitch extends Jouster
     public boolean playerCaught()
     {
         if (isTouching(Player.class))   {
-            Greenfoot.playSound("birds001.wav");
+            Greenfoot.playSound("griffindor.wav");
             return true;
         }
         return false;
